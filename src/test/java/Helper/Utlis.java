@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class Utlis {
 	public static String getProperty(String property) throws Exception {
-		InputStream input = new FileInputStream("src\\test\\resources\\Properties\\properties");
+		InputStream input = new FileInputStream("src/test/resources/Properties/properties");
 		
 		Properties properties = new Properties();
 		

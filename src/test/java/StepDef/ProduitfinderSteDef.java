@@ -1,6 +1,6 @@
 package StepDef;
 
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import Helper.Config;
 import Helper.Utlis;
@@ -13,7 +13,7 @@ import io.cucumber.java.en.When;
 public class ProduitfinderSteDef {
 	@Given("utilisateur el sur la page chemis & blouses")
 	public void utilisateur_el_sur_la_page_chemis_blouses() throws Exception {
-		Config.driver = new EdgeDriver();
+		Config.driver = new ChromeDriver();
 		Config.maxwin();
 		Config.driver.get(Utlis.getProperty("produithome"));
 	   

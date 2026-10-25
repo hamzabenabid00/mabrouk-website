@@ -1,6 +1,6 @@
 package StepDef;
 
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import Helper.Config;
 import Helper.Utlis;
@@ -12,7 +12,7 @@ import io.cucumber.java.en.When;
 public class HomepageStepDef {
 	@Given("lutilisateur est a la page dacceuil")
 	public void lutilisateur_est_a_la_page_dacceuil() throws Exception {
-		Config.driver = new EdgeDriver();
+		Config.driver = new FirefoxDriver();
 		Config.maxwin();
 		Config.driver.get(Utlis.getProperty("homepage"));
 	}

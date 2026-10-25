@@ -15,12 +15,7 @@ public class Config {
 	}
 
 
-	public static void attendreElementCliquable(WebElement element, int s) {
-	    WebDriverWait wait = new WebDriverWait(
-	        driver, Duration.ofSeconds(s)
-	    );
-
-	    wait.until(ExpectedConditions.elementToBeClickable(element));
+	public static  void attent(int s) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(s));
 	}
-
 }
