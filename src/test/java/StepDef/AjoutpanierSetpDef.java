@@ -17,12 +17,17 @@ public class AjoutpanierSetpDef {
 		Config.driver.get(Utlis.getProperty("ajoutpanier"));
 	}
 	@When("lutilisateur est cliquer sur le couleur {string} et clique sur la taille {string} et cliquer sur ajout au panier")
-	public void lutilisateur_est_cliquer_sur_le_couleur_et_clique_sur_la_taille_et_cliquer_sur_ajout_au_panier(String ccouleur, String ttaille) {
-		//AjoutPanier  panier = new AjoutPanier();
+	public void lutilisateur_est_cliquer_sur_le_couleur_et_clique_sur_la_taille_et_cliquer_sur_ajout_au_panier(String ccouleur, String ttaille) throws Exception {
+		AjoutPanier  panier = new AjoutPanier();
+		
+		panier.select_color_and_size(ccouleur, ttaille);
 		
 	}
 	@Then("utlisateur est dirige vers la page panier et verifier lajout de produit {string}")
 	public void utlisateur_est_dirige_vers_la_page_panier_et_verifier_lajout_de_produit(String ttext) {
-	    
+		AjoutPanier  panier = new AjoutPanier();
+		panier.open_cart();
+		panier.verifcation(ttext);
+		Config.driver.quit();
 	}
 }

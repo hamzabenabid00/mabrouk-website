@@ -24,8 +24,8 @@ public class HomepageStepDef {
 	@Then("utlisateur est dirige vers la page {string}")
 	public void utlisateur_est_dirige_vers_la_page(String titre) {
 		Homepage page =new Homepage();
-		   page.verification(titre);
-		   Config.driver.quit();
+		 page.verification(titre);
+		  Config.driver.quit();
 	    
 	}
 }
